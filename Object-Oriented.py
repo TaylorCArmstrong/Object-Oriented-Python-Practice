@@ -122,4 +122,25 @@ for Student in students:
 for student in students:
     print(f"{student.name} has {len(student.grades)} grades.")
 
-    
+#Part 6: Bonus(Optional)
+
+#regex for validation
+
+email_pattern = r'^\w+@\w+\.com$'
+
+for student in students:
+    if re.match(email_pattern, student.email):
+        print(f"{student.email} is valid.")
+    else:
+        print(f"{student.email} is NOT valid.")
+
+#count how many grades are over 90 for all students\
+
+count_above_90 = 0
+
+for student in students:
+    for grade in student.grades:
+        if grade > 90:
+            count_above_90 += 1
+
+print("Number of grades above 90:", count_above_90)
