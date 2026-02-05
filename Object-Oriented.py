@@ -30,13 +30,13 @@ class student:
 #Create 3 student objects with initial grades
 
 Student1 = student ("Annie", "annie@gmail.com")
-Student1.grades[98, 75, 80]
+Student1.grades = [98, 75, 80]
 
 Student2 = student ("Karl", "karl@Yahoo.com")
-Student2.grades[81, 79, 92]
+Student2.grades = [81, 79, 92]
 
 Student3 = student ("Walker", "walker@outlook.com")
-Student3.grades[98, 94, 100]
+Student3.grades = [98, 94, 100]
 
 #Adding 2 new grades for each student
 
@@ -90,7 +90,7 @@ def grades_tuple(self):
 
 # try/except
 
-grades_as_tuple = student.grades_tuple()
+grades_as_tuple = Student1.grades_tuple()
 print("Grades as tuple:", grades_as_tuple)
 
 try:
@@ -108,7 +108,7 @@ for student in students:
 
 #Accessing the first and last grade for each student
 
-for Student in students:
+for student in students:
     if student.grades:
         first = student.grades[0]
         last = student.grades[-1]
