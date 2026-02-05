@@ -80,3 +80,20 @@ for student in student_dict.values():
     all_grades.update(student.grades)
 
 print("All unique grades:", all_grades)
+
+#Part 4: Tuple Practice
+
+#method for returning grades as a tuple
+
+def grades_tuple(self):
+    return tuple(self.grades)
+
+# try/except
+
+grades_as_tuple = student.grades_tuple()
+print("Grades as tuple:", grades_as_tuple)
+
+try:
+    grades_as_tuple[0] = 999
+except TypeError:
+    print("Tuples are immutable, their values cannot be changed.")
